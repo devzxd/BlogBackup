@@ -2,7 +2,8 @@ title: 开篇寄语
 author: 赵旭东
 tags:
   - 随笔
-categories: []
+categories:
+  - 随笔
 date: 2017-04-20 18:28:00
 ---
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=355992&auto=0&height=66"></iframe>

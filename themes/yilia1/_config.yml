@@ -2,7 +2,8 @@
 
 menu:
   主页: /
-  随笔: /tags/随笔/
+  技术: /categories/技术/
+  随笔: /categories/随笔/
 
 # SubNav
 subnav:

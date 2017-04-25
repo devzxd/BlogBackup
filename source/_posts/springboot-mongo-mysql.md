@@ -2,7 +2,8 @@ title: 使用IDEA搭建SpringBoot项目且整合mongoDB和mysql
 author: 赵旭东
 tags:
   - springboot
-categories: []
+categories:
+  - 技术
 date: 2017-04-24 18:17:00
 ---
 SpringBoot项目相对SpringMVC项目有搭建迅速，配置更少的优点。创建springboot项目有很多种方式，本文使用idea创建一个整合mongoDB和mysql数据库的简单的springboot项目。文章末尾附源码地址。
