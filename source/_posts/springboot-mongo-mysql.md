@@ -7,10 +7,12 @@ categories:
 date: 2017-04-24 18:17:00
 ---
 SpringBoot项目相对SpringMVC项目有搭建迅速，配置更少的优点。创建springboot项目有很多种方式，本文使用idea创建一个整合mongoDB和mysql数据库的简单的springboot项目。文章末尾附源码地址。
+
+<!--more-->
+
 ##搭建步骤：
 主要是以截图的方式介绍搭建过程。
 
-<!--more-->
 
 -  **进入新建项目界面，按照下图操作**
 
