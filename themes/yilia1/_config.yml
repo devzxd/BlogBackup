@@ -72,7 +72,8 @@ share_jia: true
 duoshuo: false
 
 #2、网易云跟帖
-wangyiyun: 'b50b4570d3044fae9a15423041a3cff6'
+wangyiyun: false
+#wangyiyun: 'b50b4570d3044fae9a15423041a3cff6'
 
 #3、畅言
 changyan_appid: false
@@ -80,6 +81,10 @@ changyan_conf: false
 
 #4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的
 disqus: false
+
+#5、友言
+youyan: false
+#youyan: 2132489
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
