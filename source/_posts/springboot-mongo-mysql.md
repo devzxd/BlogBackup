@@ -1,9 +1,11 @@
 title: 使用IDEA搭建SpringBoot项目且整合mongoDB和mysql
 author: 赵旭东
 tags:
-  - springboot
   - mongoDB
+  - springboot
   - mysql
+  - IDEA
+  - ''
 categories:
   - 技术
 date: 2017-04-28 10:52:00
