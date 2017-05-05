@@ -1,14 +1,15 @@
-title: Feign使用Hystix无效原因及解决方法
+title: Feign使用Hystrix无效原因及解决方法
 author: 赵旭东
 tags:
   - Spring Cloud
   - feign
-  - hystix
+  - hystrix
+  - ''
 categories:
   - 技术
 date: 2017-05-05 14:26:00
 ---
-最近项目重构使用了Spring Boot和Spring Cloud。这两者结合确实给项目带来了方便，同时也遇到了一些问题。其中使用feign作为服务消费，但是断路器hystix一直不起作用让人很费解。最终经过重重查找终于找到原因，以及解决方法。
+最近项目重构使用了Spring Boot和Spring Cloud。这两者结合确实给项目带来了方便，同时也遇到了一些问题。其中使用feign作为服务消费，但是断路器hystrix一直不起作用让人很费解。最终经过重重查找终于找到原因，以及解决方法。
 
 <!--more-->
 
@@ -54,7 +55,7 @@ date: 2017-05-05 14:26:00
 在文档中会看到
 ![文档说明](http://ooqkdlcps.bkt.clouddn.com/blog/20170505/145600600.png?imageslim)
 
-这个意思就说feign默认是启用hystix的，如果要禁用的话需要加配置语句。但是种种迹象表明，feign中并没有有启用hystix，看到这里当时我就很疑惑，但是发现了hystix在feign中的开关，还是有所收获的。我抱着试一试的心态照着上面的描述在配置文件中加上了配置，将<code>false</code>改为了<code>true</code>，结果神奇般的起了作用！
+这个意思就说feign默认是启用hystrix的，如果要禁用的话需要加配置语句。但是种种迹象表明，feign中并没有有启用hystrix，看到这里当时我就很疑惑，但是发现了hystrix在feign中的开关，还是有所收获的。我抱着试一试的心态照着上面的描述在配置文件中加上了配置，将<code>false</code>改为了<code>true</code>，结果神奇般的起了作用！
 
 虽然问题解决了，为什么官方文档还是有错误的？在这里吐槽一句:TMD（挺萌的）~~~。
 
@@ -64,9 +65,9 @@ date: 2017-05-05 14:26:00
 
 ![FeignClientsConfiguration.java](http://ooqkdlcps.bkt.clouddn.com/blog/20170505/151244619.png?imageslim)
 
-为什么要默认关闭hystix呢？请看这里：https://github.com/spring-cloud/spring-cloud-netflix/issues/1277
+为什么要默认关闭hystrix呢？请看这里：https://github.com/spring-cloud/spring-cloud-netflix/issues/1277
 
-至此，终于知道了产生错误的原因，以及为什么要默认关闭hystix。
+至此，终于知道了产生错误的原因，以及为什么要默认关闭hystrix。
 
 <h2> 解决方案</h2> 
 
