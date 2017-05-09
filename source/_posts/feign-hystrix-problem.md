@@ -2,9 +2,7 @@ title: Feign使用Hystrix无效原因及解决方法
 author: 赵旭东
 tags:
   - Spring Cloud
-  - feign
-  - hystrix
-  - ''
+  - Spring Boot
 categories:
   - 技术
 date: 2017-05-05 14:26:00
