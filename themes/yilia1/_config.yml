@@ -56,7 +56,7 @@ weixin: '/assets/pay/weixin.png'
 
 # Miscellaneous
 baidu_analytics: '7b4a5c50c8deb6bd9879feeef4e6cfbf'
-google_analytics: ''
+google_analytics: 'UA-99340281-1'
 favicon: /favicon.png
 
 #你的头像url
