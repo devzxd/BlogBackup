@@ -7,9 +7,8 @@ categories:
   - 技术
 date: 2017-05-23 17:17:00
 ---
-原文地址：https://juejin.im/post/5902ca705c497d005829ed6f
 
-原文作者 freewolf
+作者 freewolf
 > 原创文章转载请标明出处
 
 
@@ -23,6 +22,8 @@ date: 2017-05-23 17:17:00
 最近安静下来，重新学习一些东西，最近一年几乎没写过代码。整天疲于奔命的日子终于结束了。坐下来，弄杯咖啡，思考一些问题，挺好。这几天有人问我Spring Boot结合Spring Security实现OAuth认证的问题，写了个Demo，顺便分享下。Spring 2之后就没再用过Java，主要是xml太麻烦，就投入了Node.js的怀抱，现在Java倒是好过之前很多，无论是执行效率还是其他什么。感谢Pivotal团队在Spring boot上的努力，感谢Josh Long，一个有意思的攻城狮。
 
 我又搞Java也是为了去折腾微服务，因为目前看国内就Java程序猿最好找，虽然水平好的难找，但是至少能找到，不像其他编程语言，找个会世界上最好的编程语言PHP的人真的不易。
+
+<!--more-->
 
 ## Spring Boot
 
@@ -564,3 +565,5 @@ curl -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJIU
 *   [http://www.ekiras.com/2015/01/spring-security-create-custom-authentication-filter-in-grails.html](https://link.juejin.im?target=http%3A%2F%2Fwww.ekiras.com%2F2015%2F01%2Fspring-security-create-custom-authentication-filter-in-grails.html)
 *   [https://auth0.com/blog/securing-spring-boot-with-jwts/](https://link.juejin.im?target=https%3A%2F%2Fauth0.com%2Fblog%2Fsecuring-spring-boot-with-jwts%2F)
 *   [http://www.jwt.io/](https://link.juejin.im?target=http%3A%2F%2Fwww.jwt.io%2F)
+
+*原文地址：https://juejin.im/post/5902ca705c497d005829ed6f*
