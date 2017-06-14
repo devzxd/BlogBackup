@@ -52,7 +52,7 @@ public class MultipleMongoProperties {
 
 ```java
 @Configuration
-@EnableMongoRepositories(basePackages = "com.kxlist.statistics.domain", mongoTemplateRef = "statisMongo")
+@EnableMongoRepositories(basePackages = "com.kxlist.statistics.domain.statis", mongoTemplateRef = "statisMongo")
 public class StatisMongoMongoTemplate {
     @Autowired
     @Qualifier("statisMongoProperties")
@@ -91,7 +91,7 @@ public class ListMongoTemplate {
     }
 
     @Bean
-    public MongoDbFactory listFactory(@SuppressWarnings("SpringJavaAutowiringInspection") MongoProperties mongoProperties) throws Exception {
+    public MongoDbFactory listFactory(MongoProperties mongoProperties) throws Exception {
 
         ServerAddress serverAdress = new ServerAddress(mongoProperties.getUri());
 
