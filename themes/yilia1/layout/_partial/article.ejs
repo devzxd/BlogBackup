@@ -3,7 +3,7 @@
     <% if (post.link || post.title){ %>
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
-       
+
         <!-- 显示阅读数 -->
         <% if (!index){%>
           <br>
@@ -17,6 +17,7 @@
         <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
         <% } %>
       </header>
+
     <% } %>
     <div class="article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
@@ -134,7 +135,28 @@
   <% if (theme.youyan){ %>
     <!-- UY BEGIN -->
     <div id="uyan_frame"></div>
-    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=<%= theme.youyan %>"></script>
+    <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=<%=theme.youyan%>"></script>
     <!-- UY END -->
   <% } %>
+
+  <% if (theme.livere) { %>
+  <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid=<%=theme.livere%>>
+      <script type="text/javascript">
+        (function(d, s) {
+          var j, e = d.getElementsByTagName(s)[0];
+
+          if (typeof LivereTower === 'function') { return; }
+
+          j = d.createElement(s);
+          j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+          j.async = true;
+
+          e.parentNode.insertBefore(j, e);
+        })(document, 'script');
+    </script>
+    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+  </div>
+<!-- City版安装代码已完成 -->
+  <%}%>
 <% } %>
