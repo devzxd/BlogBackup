@@ -107,7 +107,7 @@ style:
 # slider的设置
 slider:
   # 是否默认展开tags板块
-  showTags: false
+  showTags: true
 
 # 智能菜单
 # 如不需要，将该对应项置为false
@@ -123,5 +123,7 @@ friends:
   William Guo: https://www.jwguo.top/
   Hi-They: http://www.hithey.com
   MyerLee: http://limingyang.xyz/
+  安妮的小熊: http://www.xiongchao.win/
+  泥瓦匠BYSocket: http://www.bysocket.com/
 
 aboutme: 河南大学软件工程，16年毕业！邮箱xudong0045@qq.com
