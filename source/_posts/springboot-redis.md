@@ -1,15 +1,9 @@
 title: springboot下使用Redis
-author: 赵旭东
-tags:
-  - Spring Boot
-  - Redis
-categories:
-  - 技术
-date: 2018-03-30 19:18:00
+date: 2018-03-30 19:51:53
 ---
 # 引入依赖
 
-```
+```xml
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -20,7 +14,6 @@ date: 2018-03-30 19:18:00
     
 ```
 <!--more-->
-
 # application.properties配置
 
 > 正常配置即可
@@ -47,8 +40,7 @@ spring.redis.timeout=0
 ```
 # RedisService 示例
 
-``` java
-
+```java
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;

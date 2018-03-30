@@ -10,7 +10,7 @@ date: 2017-11-17 17:24:00
 ---
 ## 1. 在项目中引入依赖
  - 引入客户端依赖。例如：
-```
+``` xml
 <dependency>
     <groupId>com.ctrip.framework.apollo</groupId>
     <artifactId>apollo-client</artifactId>
@@ -20,7 +20,7 @@ date: 2017-11-17 17:24:00
  > **注意：要根据实际情况引入，不能盲目引入最新版** 
  
  - 引入spring-cloud依赖(配合实时更新)。例如：
- ```
+ ``` xml
     <dependency>
     	<groupId>org.springframework.cloud</groupId>
     	<artifactId>spring-cloud-context</artifactId>
@@ -35,12 +35,13 @@ date: 2017-11-17 17:24:00
   - 在resources目录下新建MATE-INF目录
   - 在MATE-INF目录下新建app.properties
   - 在properties填入appid,appid要保持唯一性。例如：
-  ```
-  app.id=10086
+  ``` 
+  app.id=10086
   ```
 ## 3. 引入配置
 - apollo配置
-```
+```java
+
 @Configuration
 @EnableApolloConfig(value = "application", order = 10)
 public class AppConfig {
@@ -52,7 +53,7 @@ public class AppConfig {
 
 > 项目中需要经常变更的内容
 
-```
+```java
 @ConfigurationProperties(prefix = "redis.cache")
 @Component
 @RefreshScope
@@ -70,7 +71,7 @@ public class SampleRedisConfig {
   //省略getter、setter
 ```
  配置中心例子
-```
+``` 
 redis.cache.expireSeconds = 100
 redis.cache.clusterNodes = 1,2
 redis.cache.commandTimeout = 100
@@ -84,7 +85,7 @@ redis.cache.someList[1] = 123456
 - 实时更新配置
 > 加上这个类之后，在需要刷新配置的bean上加@RefreshScope。配置中心修改内容，项目无需重启就会实时更新。
 
-```
+```java
 @Component
 public class SpringBootApolloRefreshConfig {
   private static final Logger logger = LoggerFactory.getLogger(SpringBootApolloRefreshConfig.class);

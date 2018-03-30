@@ -13,7 +13,7 @@ date: 2017-11-17 17:29:00
 
 
 文件内容如下：
-```
+``` xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration scan="true" scanPeriod="60 seconds" debug="true">
     <!--日志存放目录，根据实际情况修改-->
