@@ -71,7 +71,7 @@ deploy:
   type: git
   repo: 
     github: git@github.com:devzxd/devzxd.github.io.git,master
-    coding: git@git.coding.net:devzxd/devzxd.coding.me.git,master
+    #coding: git@git.coding.net:devzxd/devzxd.coding.me.git,master
   #branch: master
 # 自动生成sitemap
 sitemap: 
