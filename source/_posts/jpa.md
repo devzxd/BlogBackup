@@ -1,8 +1,18 @@
 title: JPA注解
 author: 赵旭东
-date: 2018-06-22 16:32:59
+
 tags:
+
+- jpa
+
+categories:
+
+- 技术
+
+date: 2018-06-22 16:32:59
+
 ---
+
 ## JPA对象注解类型
 
 - @Table - 映射表名
