@@ -1,4 +1,4 @@
-title: java代码判断base64字符串形式的图片格式、大小、高宽
+title: Java代码判断base64字符串形式的图片格式、大小、高宽
 author: 赵旭东
 tags:
   - base64
