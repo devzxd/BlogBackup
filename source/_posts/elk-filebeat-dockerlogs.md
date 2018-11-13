@@ -63,7 +63,14 @@ filebeat.prospectors:
   paths:
     - /var/lib/docker/containers/*/*.log #需要读取日志的目录#
   json.keys_under_root: true # 因为docker使用的log driver是json-file，因此采集到的日志格式是json格式，设置为true之后，filebeat会将日志进行json_decode处理
+  json.add_error_key: true #如果启用此设置，则在出现JSON解组错误或配置中定义了message_key但无法使用的情况下，Filebeat将添加“error.message”和“error.type：json”键。
+  json.message_key: log #一个可选的配置设置，用于指定应用行筛选和多行设置的JSON密钥。 如果指定，键必须位于JSON对象的顶层，且与键关联的值必须是字符串，否则不会发生过滤或多行聚合。
   tail_files: true
+  # 将error日志合并到一行
+  multiline.pattern: '^([0-9]{4}|[0-9]{2})-[0-9]{2}' 
+  multiline.negate: true
+  multiline.match: after
+  multiline.timeout: 10s
 #  registry_file: /opt/filebeat/registry
 #-------------------------- Elasticsearch output ------------------------------
 # 直接输出到elasticsearch,这里的hosts是elk地址，端口号是elasticsearch端口#
@@ -217,6 +224,8 @@ services:
 重新启动应用，然后访问http://127.0.0.1:5601 重新添加索引。查看日志，可以增加过滤条件 `attrs.service:db`,此时查看到的日志就全部来自db容器。结果如下图所示：
 ![elk过滤结果](https://s1.ax1x.com/2018/10/25/iyVFp9.jpg)
 
-## 参考文章
+# 参考文章
 
 [采集docker-container日志](http://www.yipzale.me/article/2018/02/collect-docker-container-log.html)
+
+[Beats详解（四）](http://www.51niux.com/?id=204)
