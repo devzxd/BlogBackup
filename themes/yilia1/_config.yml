@@ -120,10 +120,10 @@ smart_menu:
   aboutme: '关于我'
 
 friends:
-  William Guo: https://www.jwguo.top/
-  Hi-They: http://www.hithey.com
-  MyerLee: http://limingyang.xyz/
-  安妮的小熊: http://www.xiongchao.win/
+  #William Guo: https://www.jwguo.top/
+  #Hi-They: http://www.hithey.com
+ # MyerLee: http://limingyang.xyz/
+#  安妮的小熊: http://www.xiongchao.win/
   泥瓦匠BYSocket: http://www.bysocket.com/
 
-aboutme: 河南大学软件工程，16年毕业！邮箱xudong0045@qq.com
+aboutme: 河南大学软件工程，16年毕业！邮箱xudong0045@qq.com，现就职于虎扑，做微服务治理相关工作～
